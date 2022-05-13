@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32407.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthenticationJwtAndRefreshToken", "AuthenticationJwtAndRefreshToken.csproj", "{EF6899C8-A5F4-47F5-A164-F28278D9AF62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationJwtAndRefreshToken.Test", "..\AuthenticationJwtAndRefreshToken.Test\AuthenticationJwtAndRefreshToken.Test.csproj", "{70004D64-0432-490B-9418-E07AC28422C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF6899C8-A5F4-47F5-A164-F28278D9AF62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF6899C8-A5F4-47F5-A164-F28278D9AF62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF6899C8-A5F4-47F5-A164-F28278D9AF62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF6899C8-A5F4-47F5-A164-F28278D9AF62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70004D64-0432-490B-9418-E07AC28422C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70004D64-0432-490B-9418-E07AC28422C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70004D64-0432-490B-9418-E07AC28422C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70004D64-0432-490B-9418-E07AC28422C3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {023C8CFA-3C13-4A92-A298-CA04B077C9A6}
+	EndGlobalSection
+EndGlobal
