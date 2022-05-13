@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "798e9b18-a51c-476d-9da9-b8b69418ffe2",
+		"name": "Authentication with jwt+refresh token",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Account/Register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"mor\",\r\n    \"lastName\" : \"cohen\",\r\n    \"role\": \"Admin\",\r\n    \"email\": \"morco234@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"confirmPassword\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44335/Account/Register",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44335",
+					"path": [
+						"Account",
+						"Register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Account/Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"morco234@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44335/Account/Login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44335",
+					"path": [
+						"Account",
+						"Login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Account/Refresh",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI4MWEyNjVjZS1kYTY4LTQyYzgtODI5OC1lMzU2OTg2NTI2ZjciLCJlbWFpbCI6Im1vcmNvMjM0QGdtYWlsLmNvbSIsInJvbGUiOiJBZG1pbiIsIm5iZiI6MTY1MjQ0ODcyNywiZXhwIjoxNjUyNDUwNTI3LCJpYXQiOjE2NTI0NDg3Mjd9.ObPkYo3sNdKWlYLBs4HyIVBfKBcrwiKMC_AOz0knBYo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"morco23@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44335/Account/Refresh",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44335",
+					"path": [
+						"Account",
+						"Refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Account/GetAllUsersResponse",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI4MWEyNjVjZS1kYTY4LTQyYzgtODI5OC1lMzU2OTg2NTI2ZjciLCJlbWFpbCI6Im1vcmNvMjM0QGdtYWlsLmNvbSIsInJvbGUiOiJBZG1pbiIsIm5iZiI6MTY1MjQ0ODcyNywiZXhwIjoxNjUyNDUwNTI3LCJpYXQiOjE2NTI0NDg3Mjd9.ObPkYo3sNdKWlYLBs4HyIVBfKBcrwiKMC_AOz0knBYo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44335/Account/GetUsersResponse",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44335",
+					"path": [
+						"Account",
+						"GetUsersResponse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Account/GetAllUsersResponse Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI4MWEyNjVjZS1kYTY4LTQyYzgtODI5OC1lMzU2OTg2NTI2ZjciLCJlbWFpbCI6Im1vcmNvMjM0QGdtYWlsLmNvbSIsInJvbGUiOiJBZG1pbiIsIm5iZiI6MTY1MjQ0ODcyNywiZXhwIjoxNjUyNDUwNTI3LCJpYXQiOjE2NTI0NDg3Mjd9.ObPkYo3sNdKWlYLBs4HyIVBfKBcrwiKMC_AOz0knBYo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44335/Account/GetAdminResponse",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44335",
+					"path": [
+						"Account",
+						"GetAdminResponse"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
